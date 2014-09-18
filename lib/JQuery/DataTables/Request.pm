@@ -4,7 +4,7 @@ use 5.012;
 use strict;
 use warnings;
 
-our $VERSION = '0.108'; # VERSION
+our $VERSION = '0.109'; # VERSION
 
 use Carp;
 
@@ -16,7 +16,7 @@ JQuery::DataTables::Request - represents a DataTables server-side request
 
 =head1 SYNOPSIS
 
- my $dt_req = JQuery::DataTables::Request->new( $client_parameters );
+ my $dt_req = JQuery::DataTables::Request->new( client_params => $client_parameters );
  if ( $dt_req->column(0)->{searchable} ) {
    # do something
  }
@@ -103,7 +103,7 @@ __PACKAGE__->mk_accessors(qw(
 
 Creates a new JQuery::DataTables::Request object. 
 
- my $dt_request = JQuery::DataTables::Request->new( client_params => $c->parameters );
+ my $dt_request = JQuery::DataTables::Request->new( client_params => \%parameters );
 
 Accepts the following parameters
 
@@ -113,6 +113,8 @@ Accepts the following parameters
 
 This is a HashRef that should contain your DataTables parameters as provided by the DataTables 
 JS library. Any parameters provided that are not recognized as DataTables request are silently ignored.
+Usually, whatever framework you are using will already have a way to convert these parameters
+to a HashRef for you, (e.g. C<< $c->req->parameters >> in a Catalyst app)
 
 =back
 

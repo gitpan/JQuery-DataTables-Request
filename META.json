@@ -4,7 +4,7 @@
       "Mike Wisener <xmikew_cpan_org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142060",
+   "generated_by" : "Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.132830",
    "license" : [
       "artistic_2"
    ],
@@ -61,6 +61,6 @@
          "web" : "https://github.com/xmikew/p5-JQuery-DataTables-Request"
       }
    },
-   "version" : "0.108"
+   "version" : "0.109"
 }
 
